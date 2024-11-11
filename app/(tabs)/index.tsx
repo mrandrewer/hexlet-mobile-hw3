@@ -1,17 +1,22 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#85c1e9",
-      }}
-    >
-      <Text style={{color: "white"}}>Привет! Меня зовут Андрей Бельский!</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Привет! Меня зовут Андрей Бельский!</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 24,
+  },
+});

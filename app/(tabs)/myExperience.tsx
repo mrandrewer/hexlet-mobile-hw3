@@ -41,7 +41,7 @@ const data = [
 export default function MyExperienceScreen() {
   const [isRefreshing, setIsRefreshing] = React.useState(false);
   return (
-    <SafeAreaView  style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={data}
         renderItem={({item}) => <LangInfo name={item.name} desc={item.desc} img={item.img}/>}
@@ -67,11 +67,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   scrollView: {
-    backgroundColor: 'light-blue',
     marginHorizontal: 20,
     maxWidth: 300
-  },
-  text: {
-    fontSize: 42,
   },
 });
