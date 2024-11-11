@@ -4,15 +4,19 @@ import { Image} from "react-native";
 
 export default function TabLayout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: 'black',
+      }}
+    >
       <Tabs.Screen 
         name="index"
         options={{ 
           title: 'Обо мне',
-          tabBarIcon: ({size, focused, color}) => {
+          tabBarIcon: ({size, focused }) => {
             return (
               <Image
-                style={{ width: size, height: size }}
+                style={{ width: size, height: size, opacity: focused ? 1 : 0.5 }}
                 source={ require("../../assets/images/profile.png") }
               />
             );
@@ -22,10 +26,10 @@ export default function TabLayout() {
         name="myExperience"
         options={{ 
           title: 'Мой опыт',
-          tabBarIcon: ({size, focused, color}) => {
+          tabBarIcon: ({size, focused }) => {
             return (
               <Image
-                style={{ width: size, height: size }}
+                style={{ width: size, height: size, opacity: focused ? 1 : 0.5 }}
                 source={ require("../../assets/images/portfolio.png") }
               />
             );
